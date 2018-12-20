@@ -6,7 +6,7 @@ To run program:
 1. Have installed Nodejs 10.0 or better
 2. Have installed NPM
 3. Download and unzip project folder.
-4. Open a terminal up inside the SSF folder, or Change Directory to the SSF folder.
+4. Open a terminal up inside the subset-sum-finder folder, or Change Directory to the subset-sum-finder folder.
 5. Use the command "npm start"
 
 The program will run in the terminal, asking you for a set of integers and target sum.
