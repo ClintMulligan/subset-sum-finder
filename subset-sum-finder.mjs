@@ -175,9 +175,9 @@ function reduceStack() {
 }
 
 function presentAnswers() {
-   console.log("")
-   console.log("Dead Branches dropped...")
-   console.log(trash)
+  // console.log("")
+  // console.log("Dead Branches dropped...")
+  // console.log(trash)
    
   console.log("")
   console.log("The Following solution sets were found...")
