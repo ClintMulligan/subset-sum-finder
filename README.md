@@ -1,5 +1,6 @@
 # subset-sum-finder
 [![](https://img.shields.io/github/license/ClintMulligan/subset-sum-finder.svg)](https://github.com/ClintMulligan/subset-sum-finder/blob/master/LICENSE)
+
 A Branch-and-Bound technique that is selective about nodes to create in an attempt to solve the Subset Sum Problem quickly.
 
 To run program:
