@@ -1,0 +1,29 @@
+{
+  "name": "subset-sum-finder",
+  "version": "0.0.1",
+  "description": "Given a set of integers find all subsets that add up to a given target integer. negatives, positves, zeroes, and duplicates allowed.",
+  "main": "subset-sum-finder.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --experimental-modules subset-sum-finder.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ClintMulligan/subset-sum-finder.git"
+  },
+  "keywords": [
+    "subset sum finder",
+    "subset sum problem",
+    "ssp calculator",
+    "subset sum"
+  ],
+  "author": "CLint Mulligan",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/ClintMulligan/subset-sum-finder/issues"
+  },
+  "homepage": "https://github.com/ClintMulligan/subset-sum-finder#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
