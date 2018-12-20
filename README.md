@@ -10,5 +10,7 @@ To run program:
 5. Use the command "npm start"
 
 The program will run in the terminal, asking you for a set of integers and target sum.
-Note: Be sure the list of integers are number-comma... no trailing comma.
-You may use negatives, zero, duplicates and unordered. (The array is sorted before processing math)
+
+Note: Be sure the list of integers is in similair format number comma number comma... no trailing comma.
+
+You may use positives, signed negatives, zeroes, duplicates and be unordered. (The array is sorted before processing math)
