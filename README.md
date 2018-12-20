@@ -17,3 +17,5 @@ Note: Be sure the list of integers is in similair format number comma number com
 Example: 5,4,2,-1,-3,0,4
 
 You may use positives, signed negatives, zeroes, duplicates and be unordered. (The array is sorted before processing math)
+
+The Code is based on a technique for solving Subset-sum problems by hand. In which a general tree is constructed, by asking if each element in the given set is Either Too Big or Too small to be a parent node, then recursively doing so for each subproblem created.
