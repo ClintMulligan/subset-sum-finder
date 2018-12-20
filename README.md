@@ -14,5 +14,6 @@ To run program:
 The program will run in the terminal, asking you for a set of integers and target sum.
 
 Note: Be sure the list of integers is in similair format number comma number comma... no trailing comma.
+Example: 5,4,2,-1,-3,0,4
 
 You may use positives, signed negatives, zeroes, duplicates and be unordered. (The array is sorted before processing math)
