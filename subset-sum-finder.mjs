@@ -111,12 +111,13 @@ function findSubsetSums(inputSet, inputSum) {
 }
 
 function reduceStack() {
-  while (stack.length !== 0) {
+  sortStack: while (stack.length !== 0) {
     let p = convertToObject(outOf(stack))
 
     // DEAD BRANCH
     if (p.problemSet.length === 0 && p.targetSum !== p.solutionSum) {
       into(trash, convertToString(p))
+      continue sortStack
     }
 
     // ZERO SUM SUBSTITUTIONS: Solution achieved but zero sum combinations may be added. Can be commented out.
@@ -125,33 +126,35 @@ function reduceStack() {
       p.solutionSum = null
       p.targetSum = 0
       into(stack, convertToString(p))
+      continue sortStack
     }
 
     // SOLUTION FOUND
     if (p.problemSet.length === 0 && p.targetSum === p.solutionSum) {
       into(answers, convertToString(p))
+      continue sortStack
     }
 
     // WORK
     if (p.problemSet.length !== 0 && p.targetSum !== p.solutionSum) {
 
-      while (p.problemSet.length !== 0) {
+      considerN: while (p.problemSet.length !== 0) {
         let actualNumber = p.problemSet[p.problemSet.length - 1]
         let n = noDecimals(actualNumber)
         let oppositeSign = n < 0 ? p.positiveSum : p.negativeSum
         let sameSign = n < 0 ? p.negativeSum : p.positiveSum
-
+        
 
         // TOO BIG
         if (absolute(n) > absolute(p.currentNeed - oppositeSign) && n !== p.currentNeed) {
           n < 0 ? p.negativeSum = p.negativeSum - n : p.positiveSum = p.positiveSum - n
           outOf(p.problemSet)
-          continue
+          continue considerN
         }
 
         // TOO SMALL
         if (sameSign < p.currentNeed && n !== p.currentNeed) {
-          break
+          break considerN
         }
 
         into(p.solutionSet, actualNumber)
@@ -168,7 +171,7 @@ function reduceStack() {
 
         // Send new packet to Stack and grab next "n"
         into(stack, copyPacket)
-        continue
+        continue considerN
       }
     }
   }
@@ -178,7 +181,8 @@ function presentAnswers() {
   // console.log("")
   // console.log(trash.length + " Dead Branches dropped...")
   // console.log(trash)
-   
+   washContainer(trash)
+
   console.log("")
   console.log(answers.length + " Following solution sets were found...")
   while (answers.length !== 0) {
@@ -202,8 +206,6 @@ function presentAnswers() {
     answer = "{ " + answer + " }"
     console.log(answer)
     
-    washContainer(trash)
-    washContainer(answers)
   }
 
   getInputs()
