@@ -176,11 +176,11 @@ function reduceStack() {
 
 function presentAnswers() {
   // console.log("")
-  // console.log("Dead Branches dropped...")
+  // console.log(trash.length + " Dead Branches dropped...")
   // console.log(trash)
    
   console.log("")
-  console.log("The Following solution sets were found...")
+  console.log(answers.length + " Following solution sets were found...")
   while (answers.length !== 0) {
     let p = convertToObject(outOf(answers))
     let solutionSet = [...p.solutionSet]
@@ -201,6 +201,9 @@ function presentAnswers() {
     answer.replace(/,/g, "newchar")
     answer = "{ " + answer + " }"
     console.log(answer)
+    
+    washContainer(trash)
+    washContainer(answers)
   }
 
   getInputs()
