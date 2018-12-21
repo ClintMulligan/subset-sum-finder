@@ -45,6 +45,7 @@
  */
 
 // UTILITIES
+// Make the code easir to read, utilizing some self spun functions.
 import { absolute } from "./utility.mjs"
 import { convertToString } from "./utility.mjs"
 import { convertToObject } from "./utility.mjs"
@@ -178,6 +179,7 @@ function reduceStack() {
 }
 
 function presentAnswers() {
+  // UNCOMMENT to have displayed packets moved to the trash stack, ie. dead branches.
   // console.log("")
   // console.log(trash.length + " Dead Branches dropped...")
   // console.log(trash)
