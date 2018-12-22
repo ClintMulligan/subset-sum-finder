@@ -179,14 +179,13 @@ function reduceStack() {
 }
 
 function presentAnswers() {
-  // UNCOMMENT to have displayed packets moved to the trash stack, ie. dead branches.
+  // UNCOMMENT to display packets moved to the trash stack, ie. dead branches.
   // console.log("")
-  // console.log(trash.length + " Dead Branches dropped...")
+  // console.log(`There were ${trash.length} Dead Branches dropped in trash...`)
   // console.log(trash)
-   washContainer(trash) // bug #1
-
+   
   console.log("")
-  console.log(answers.length + " Following solution sets were found...")
+  console.log(`There were ${answers.length} solution sets found...`)
   while (answers.length !== 0) {
     let p = convertToObject(outOf(answers))
     let solutionSet = [...p.solutionSet]
