@@ -183,7 +183,7 @@ function presentAnswers() {
   // console.log("")
   // console.log(trash.length + " Dead Branches dropped...")
   // console.log(trash)
-   washContainer(trash)
+   washContainer(trash) // bug #1
 
   console.log("")
   console.log(answers.length + " Following solution sets were found...")
