@@ -147,6 +147,8 @@ function reduceStack() {
         
 
         // TOO BIG
+        // The Number is Too BIg and is will continue to be so along this branch.
+        // It is therefore removed from the array of possible integers.
         if (absolute(n) > absolute(p.currentNeed - oppositeSign) && n !== p.currentNeed) {
           n < 0 ? p.negativeSum = p.negativeSum - n : p.positiveSum = p.positiveSum - n
           outOf(p.problemSet)
@@ -154,10 +156,16 @@ function reduceStack() {
         }
 
         // TOO SMALL
+        // The number is Too Small but may be utilized later in branch.
+        // Therefore it is skipped on current recursive step.
         if (sameSign < p.currentNeed && n !== p.currentNeed) {
           break considerN
         }
-
+        
+        // PASSES TEST
+        // The Number is selected as a node in branch.
+        // Another packet containing this number is created and put into stack. 
+        // The steps are reverse and the loop continues to discover any other posible nodes at this junction
         into(p.solutionSet, actualNumber)
         n < 0 ? p.negativeSum = p.negativeSum - n : p.positiveSum = p.positiveSum - n
         p.solutionSum = p.solutionSum + n
