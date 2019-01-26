@@ -20,4 +20,6 @@ You may use positives, signed negatives, zeroes, duplicates and be unordered. (T
 
 The Code is based on a technique for solving Subset-sum problems by hand. In which a general tree is constructed, by asking if each element in the given set is Either Too Big or Too Small to be a parent node, then recursively doing so for each subproblem created.
 
+The Code is not optimised and is for testing the concept of Too Big-Too Small technique. A technique that should be faster than other branch-bounding techniques, naive brute force and the commonly used greedy algorithms or dynamic programming.
+
 Warning: The technique will be refactored eventually. It presents false negatives at input arrays of 45+ with subsets that have 2 subsets that equal the target number and 1 subset of negative target number.  Works for small array inputs but around 40 begins to appear. example may look like [7,4,2,5,8,-8,-1,-4]
