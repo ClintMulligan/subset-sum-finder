@@ -22,4 +22,4 @@ The Code is based on a technique for solving Subset-sum problems by hand. In whi
 
 The Code is not optimised and is for testing the concept of Too Big-Too Small technique. A technique that should be faster than other branch-bounding techniques, naive brute force and the commonly used greedy algorithms or dynamic programming.
 
-Warning: The technique will be refactored eventually. It presents false negatives at input arrays of 45+ with subsets that have 2 subsets that equal the target number and 1 subset of negative target number.  Works for small array inputs but around 40 begins to appear. example may look like [7,4,2,5,8,-8,-1,-4]
+WARNING: The technique will be refactored eventually. It presents false negatives at input arrays of 45+. The subsets that have 2 target number sets and a negative target number set get skipped. Works for small array inputs but around 40 begins to appear. I plan to change its javascript implementation. But i think the technique even by hand has some exploration value.
